@@ -1,5 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// src/pages/home.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -22,27 +23,38 @@ function Home() {
       <section className="py-20 container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Features</h2>
         <div className="flex flex-wrap justify-center gap-12">
-          
-          <div className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+
+          {/* University Finder Card */}
+          <Link to="/university-finder" className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
             <h3 className="text-xl font-bold text-blue-600 mb-4">University Finder</h3>
             <p className="text-gray-600">
               Enter your academic preferences and budget, and find universities matching your dreams.
             </p>
-          </div>
+          </Link>
 
-          <div className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          {/* Scholarship Alerts Card */}
+          <Link to="/scholarship-alerts" className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
             <h3 className="text-xl font-bold text-blue-600 mb-4">Scholarship Alerts</h3>
             <p className="text-gray-600">
               Get real-time alerts for scholarships to fund your studies.
             </p>
-          </div>
+          </Link>
 
-          <div className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          {/* Hostel Booking Card */}
+          <Link to="/hostel-booking" className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
             <h3 className="text-xl font-bold text-blue-600 mb-4">Hostel Booking</h3>
             <p className="text-gray-600">
               Find and book hostels near your university directly through CampusMate.
             </p>
-          </div>
+          </Link>
+
+          {/* University Comparison Card */}
+          <Link to="/university-comparison" className="max-w-sm bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+            <h3 className="text-xl font-bold text-blue-600 mb-4">Compare Universities</h3>
+            <p className="text-gray-600">
+              Easily compare universities side by side based on your preferences.
+            </p>
+          </Link>
 
         </div>
       </section>
@@ -58,7 +70,7 @@ function Home() {
       </section>
 
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

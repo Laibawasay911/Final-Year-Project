@@ -1,16 +1,20 @@
 // src/App.jsx
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import Home from './pages/home.jsx'
-import Contact from './pages/contact.jsx'
-import About from './pages/about.jsx'
-import Faq from './pages/faq.jsx'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/home.jsx';
+import Contact from './pages/contact.jsx';
+import About from './pages/about.jsx';
+import Faq from './pages/faq.jsx';
+import UniversityFinder from './pages/universityFinder';
+import HostelBooking from './pages/hostelBooking';
+import ScholarshipAlerts from './pages/ScholarshipsAlert';
+import UniversityComparison from './pages/universityComparison';
 
 function App() {
   return (
     <Router>
       <div className="bg-gray-50 min-h-screen flex flex-col justify-between">
-        
+
         {/* Navbar */}
         <header className="bg-white shadow">
           <div className="container mx-auto p-4 flex justify-between items-center">
@@ -31,6 +35,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Hidden Routes - navigated via Home Page cards */}
+            <Route path="/university-finder" element={<UniversityFinder />} />
+            <Route path="/hostel-booking" element={<HostelBooking />} />
+            <Route path="/scholarship-alerts" element={<ScholarshipAlerts />} />
+            <Route path="/university-comparison" element={<UniversityComparison />} />
           </Routes>
         </main>
 
@@ -46,7 +55,7 @@ function App() {
         </footer>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
