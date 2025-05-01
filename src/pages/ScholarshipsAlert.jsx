@@ -17,9 +17,12 @@ function ScholarshipAlerts() {
     <div className="container mx-auto px-6 py-20 text-center">
       <h1 className="text-4xl font-bold text-blue-700 mb-10">Scholarship Alerts</h1>
 
-      <p className="text-lg text-gray-700 mb-8">Click below to explore latest scholarships available for you!</p>
+      <p className="text-lg text-gray-700 mb-8">Click below to explore the latest scholarships available for you!</p>
 
-      <button onClick={handleSubmit} className="px-6 py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition">
+      <button
+        onClick={handleSubmit}
+        className="px-6 py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition"
+      >
         Show Scholarships
       </button>
     </div>

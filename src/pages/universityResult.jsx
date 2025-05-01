@@ -8,7 +8,7 @@ function UniversityResults() {
   return (
     <div className="container mx-auto px-6 py-20">
       <h1 className="text-4xl font-bold text-blue-700 text-center mb-10">University Results</h1>
-      
+
       {universities.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {universities.map((uni, index) => (
