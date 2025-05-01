@@ -8,9 +8,11 @@ import UniversityFinder from './pages/universityFinder';
 import UniversityResults from './pages/universityResult';
 import ScholarshipAlerts from './pages/ScholarshipsAlert';
 import ScholarshipResults from './pages/scholarshipResults';
-import HostelBooking from './pages/hostelBooking'; {/* Added import for HostelBooking */}
-import AvailableHostels from './pages/availableHostels'; {/* Added import for AvailableHostels */}
-import UniversityComparison from './pages/universityComparison';
+import HostelBooking from './pages/hostelBooking';
+import AvailableHostels from './pages/availableHostels';
+import UniversityComparison from './pages/universityComparison'; {/* Added import for UniversityComparison */}
+import ComparisonResults from './pages/universityComparisonResult'; {/* Added import for ComparisonResults */}
+
 
 function App() {
   return (
@@ -40,9 +42,10 @@ function App() {
             <Route path="/university-results" element={<UniversityResults />} />
             <Route path="/scholarship-alerts" element={<ScholarshipAlerts />} />
             <Route path="/scholarship-results" element={<ScholarshipResults />} />
-            <Route path="/hostel-booking" element={<HostelBooking />} /> {/* Added this route */}
-            <Route path="/available-hostels" element={<AvailableHostels />} /> {/* Added this route */}
-            <Route path="/university-comparison" element={<UniversityComparison />} />
+            <Route path="/hostel-booking" element={<HostelBooking />} />
+            <Route path="/available-hostels" element={<AvailableHostels />} />
+            <Route path="/university-comparison" element={<UniversityComparison />} /> {/* Added this route */}
+            <Route path="/comparison-results" element={<ComparisonResults />} /> {/* Added this route */}
           </Routes>
         </main>
 

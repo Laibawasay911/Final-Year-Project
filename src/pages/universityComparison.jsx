@@ -12,17 +12,21 @@ function UniversityComparison() {
 
   const handleAdd = () => {
     if (selected) {
-      setUniversities([...universities, {
-        name: selected,
-        city: 'Lahore',
-        fee: 450000,
-        ranking: Math.floor(Math.random() * 100) + 1
-      }]);
+      setUniversities([
+        ...universities,
+        {
+          name: selected,
+          city: 'Lahore',
+          fee: 450000,
+          ranking: Math.floor(Math.random() * 100) + 1,
+        },
+      ]);
       setSelected('');
     }
   };
 
   const handleCompare = () => {
+    // Navigate to the results page and pass the selected universities for comparison
     navigate('/comparison-results', { state: { comparisons: universities } });
   };
 
@@ -39,15 +43,31 @@ function UniversityComparison() {
           <option value="Punjab University">Punjab University</option>
         </select>
 
-        <button onClick={handleAdd} className="w-full py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition">
+        <button
+          onClick={handleAdd}
+          className="w-full py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition"
+        >
           Add to Compare
         </button>
 
         {universities.length > 0 && (
-          <button onClick={handleCompare} className="w-full py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition mt-4">
+          <button
+            onClick={handleCompare}
+            className="w-full py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition mt-4"
+          >
             Compare Now
           </button>
         )}
+      </div>
+
+      {/* Display the added universities for comparison */}
+      <div className="mt-6">
+        <h3 className="text-lg font-semibold text-gray-700">Selected Universities:</h3>
+        <ul>
+          {universities.map((uni, index) => (
+            <li key={index} className="text-gray-600">{uni.name}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
